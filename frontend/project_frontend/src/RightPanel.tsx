@@ -60,12 +60,7 @@ export default function RightPanel({
       {/* Scrollable content */}
       <div className="flex-1 overflow-y-auto scrollbar-subtle px-4 py-4 flex flex-col gap-4">
         {/* QCO Compliance Banner */}
-        {/*coming soon overlay */}
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 z-10 max-w-md p-6 mx-auto rounded-xl bg-white/30 backdrop-blur-md border border-white/20 shadow-lg opacity-90">
-          <p className="mt-2 black">
-            COMING SOON
-          </p>
-        </div>
+       
         <ComplianceBanner
           status={complianceStatus}
           onStatusChange={onStatusChange}

@@ -33,9 +33,16 @@ export default function ComplianceBanner({
   }[status]
 
   return (
+    <div className="relative">
+       {/*coming soon overlay */}
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 z-10 max-w-md p-6 mx-auto rounded-xl bg-white/30 backdrop-blur-md border border-white/20 shadow-lg opacity-90">
+          <p className="mt-2 black">
+            COMING SOON
+          </p>
+        </div>
     <div
-      className="flex items-center gap-3 px-4 py-3 rounded-xl border"
-      style={{ background: cfg.bg, borderColor: cfg.border }}
+    className="flex items-center gap-3 px-4 py-3 rounded-xl border"
+    style={{ background: cfg.bg, borderColor: cfg.border }}
     >    
       <TrafficLight status={status} />
       <div className="flex-1 min-w-0">
@@ -47,7 +54,7 @@ export default function ComplianceBanner({
               fontFamily: "'DM Sans', sans-serif",
               letterSpacing: "0.09em",
             }}
-          >
+            >
             QCO Status
           </span>
           <span className="text-sm font-bold text-slate-800">{cfg.label}</span>
@@ -58,24 +65,25 @@ export default function ComplianceBanner({
         {(["compliant", "partial", "non-compliant"] as ComplianceStatus[]).map(
           (s) => (
             <button
-              key={s}
-              onClick={() => onStatusChange(s)}
-              className="px-2.5 py-1 rounded-lg text-xs font-medium transition-all"
-              style={{
-                background: status === s ? "#1e3a5f" : "rgba(0,0,0,0.04)",
-                color: status === s ? "white" : "#64748b",
-                border: status === s ? "none" : "1px solid rgba(0,0,0,0.08)",
-              }}
+            key={s}
+            onClick={() => onStatusChange(s)}
+            className="px-2.5 py-1 rounded-lg text-xs font-medium transition-all"
+            style={{
+              background: status === s ? "#1e3a5f" : "rgba(0,0,0,0.04)",
+              color: status === s ? "white" : "#64748b",
+              border: status === s ? "none" : "1px solid rgba(0,0,0,0.08)",
+            }}
             >
               {s === "compliant"
                 ? "Compliant"
                 : s === "partial"
-                  ? "Partial"
-                  : "Non-Compliant"}
+                ? "Partial"
+                : "Non-Compliant"}
             </button>
           ),
         )}
       </div>
+    </div>
     </div>
   )
 }
