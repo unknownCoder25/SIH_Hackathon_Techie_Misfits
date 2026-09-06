@@ -99,7 +99,7 @@ The architecture is designed so additional categories can be added without chang
           |          |          |
           v          v          v
        Primary    Allied      Certification
-       Standard   Standards   Requirements
+       Standard   Standards   requirements
           |          |          |
           +----------+----------+
                      |
@@ -181,7 +181,7 @@ SIH_Hackathon_Techie_Misfits/
 ├── docs/
 │   └── README.md
 │
-└── Requirements.txt
+└── requirements.txt
 ```
 
 ---
@@ -191,7 +191,7 @@ SIH_Hackathon_Techie_Misfits/
 Install dependencies:
 
 ```bash
-pip install -r Requirements.txt
+pip install -r requirements.txt
 ```
 
 Start FastAPI:
