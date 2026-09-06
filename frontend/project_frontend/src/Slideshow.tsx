@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react"
+import img1 from "./assets/images/img1.jpeg"
+import img2 from "./assets/images/img2.jpeg"
+import img3 from "./assets/images/img3.jpeg"
+import img4 from "./assets/images/img4.jpeg"
+import img5 from "./assets/images/img5.jpeg"
 
-//slideshow images array
-const SLIDESHOW_IMAGES = [
-  "frontend/project_frontend/images/img1.jpeg?w=1920&h=1080&fit=crop&auto=format",
-  "frontend/project_frontend/images/img2.jpeg?w=1920&h=1080&fit=crop&auto=format",
-  "frontend/project_frontend/images/img3.jpeg?w=1920&h=1080&fit=crop&auto=format",
-  "frontend/project_frontend/images/img4.jpeg?w=1920&h=1080&fit=crop&auto=format",
-  "frontend/project_frontend/images/img5.jpeg?w=1920&h=1080&fit=crop&auto=format",
-]
+//slidshow images array
+const SLIDESHOW_IMAGES = [img1, img2, img3, img4, img5]
 
 //function for slideshow
 export default function SlideshowBackground() {
